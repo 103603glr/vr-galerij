@@ -36,6 +36,14 @@
         color="red">
     </a-sphere>
 
+
+<a-scene shadow="type: pcfsoft">
+    <a-entity light="type: ambient; intensity: 0.6"></a-entity>
+    <a-entity light="type: directional; intensity: 0.8" position="2 4 1"></a-entity>
+    <a-entity light="type: point: intensity: 0.7" position="0 3 -2"></a-entity>
+    <a-entity geometry="primitive: box"
+              material="color: #c2a878"
+              shadow="cast: true; receive: true"></a-entity>
 </a-scene>
 </a-scene>
 </body>
