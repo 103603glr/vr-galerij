@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 1.1 - Hello World VR</title>
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+ <script src="app.js"></script>
+</head>
+<body>
+<a-scene>
+      <a-sky src="360.jpg" rotation="0 -130 0"></a-sky>
+
+        <a-text
+            value="Hello World VR!"
+            position="-1 1.5 -3"
+            color="#ffffff">
+        </a-text>
+    <a-entity camera look-controls>
+        <a-entity
+            cursor="rayOrigin: mouse;"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat">
+        </a-entity>
+    </a-entity>
+
+    <a-box
+        id="mijnKubus"
+        position="-2 1 -4"
+        color="blue"
+        interactief-object>
+    </a-box>
+
+    <a-sphere
+        id="mijnBol"
+        position="2 1 -4"
+        color="red">
+    </a-sphere>
+
+</a-scene>
+<a-scene shadow="type: pcfsoft">
+    <a-entity light="type: ambient; intensity: 0.6"></a-entity>
+    <a-entity light="type: directional; intensity: 0.8" position="2 4 1"></a-entity>
+    <a-entity light="type: point: intensity: 0.7" position="0 3 -2"></a-entity>
+    <a-entity geometry="primitive: box"
+              material="color: #c2a878"
+              shadow="cast: true; receive: true"></a-entity>
+</a-scene>
+</a-scene>
+</body>
+</html>
